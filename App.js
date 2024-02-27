@@ -87,6 +87,7 @@ const styles = StyleSheet.create({
           flex: 1, // Estende o conteúdo até o final da página
           justifyContent: 'center', // Centraliza verticalmente
           paddingHorizontal: 40, // Adiciona espaço nas laterais
+          
         },
         form1: {
           backgroundColor: 'rgba(39, 34, 34, 0.749)',
@@ -96,10 +97,11 @@ const styles = StyleSheet.create({
           shadowOffset: {
             width: 0,
             height: 4,
+            
           },
           shadowOpacity: 0.1,
           shadowRadius: 8,
-          elevation: 5,
+          elevation: 2,
         },
         label1: {
           color: 'white',
@@ -139,31 +141,33 @@ const styles = StyleSheet.create({
             flex: 1,
           },
           header2: {
-            backgroundColor: '#a29439',
+            backgroundColor: '#A18E5C',
             alignItems: 'center',
             justifyContent: 'center',
             paddingVertical: 10,
+            padding: 20,
+
           },
           headerText2: {
             color: '#fff',
-            fontSize: 20,
+            
+            fontSize: 24,
+          fontWeight: 'bold',
           },
           main2: {
             flex: 1,
             padding: 10,
           },
-          product2: {
+          Text2: {
             flexBasis: '32%',
             marginBottom: 20,
-            borderWidth: 1,
-            borderColor: '#ddd',
+            borderWidth: 6,
+            borderColor: 'black',
             borderRadius: 5,
             overflow: 'hidden',
+            
           },
-          image2: {
-            width: '100%',
-            height: 200,
-          },
+          
           title2: {
             padding: 10,
             textAlign: 'center',
@@ -180,8 +184,7 @@ const styles = StyleSheet.create({
           container3: {
             
             flex: 1, // Estende o conteúdo até o final da página
-          justifyContent: 'center', // Centraliza verticalmente
-          paddingHorizontal: 40, // Adiciona espaço nas laterais
+         
           },
           header3: {
           backgroundColor: '#A18E5C',
@@ -205,10 +208,11 @@ const styles = StyleSheet.create({
             borderColor: 'black',
             padding: 15,
             backgroundColor: 'white',
+            marginTop: 80,
           },
           contato3: {
             fontSize: 30,
-            color: 'white',
+            color: 'black',
           },
           input3: {
             borderWidth: 1,
@@ -234,21 +238,26 @@ const styles = StyleSheet.create({
             flex: 1,
           },
           header4: {
-            backgroundColor: '#a29439',
+            backgroundColor: '#A18E5C',
             alignItems: 'center',
             justifyContent: 'center',
             paddingTop: 2,
             paddingBottom: 2,
+            padding: 20,
           },
           headerText4: {
             color: '#fff',
             fontSize: 24,
+            marginBottom: 20,
+            fontSize: 24,
+          fontWeight: 'bold',
           },
           mapContainer4: {
             width: '82%',
             height: 400,
             position: 'relative',
             marginHorizontal: 'auto',
+            marginTop: 50,
           },
           map4: {
             flex: 1,
@@ -265,6 +274,15 @@ const styles = StyleSheet.create({
           footerText4: {
             color: '#fff',
           },
+          Text4: {
+            flexBasis: '500%',
+            marginBottom: 10,
+            borderWidth: 6,
+            borderColor: 'black',
+            borderRadius: 5,
+            overflow: 'hidden',
+            
+          },
 });
 
 function Reservas ({ navigation }) {
@@ -280,7 +298,7 @@ return (
           <TextInput style={styles.input1} placeholder="Nome" />
 
           <Text style={styles.label1}>DATA:</Text>
-          <TextInput style={styles.input} placeholder="Data" />
+          <TextInput style={styles.input1} placeholder="Data" />
 
           <Text style={styles.label1}>RESERVAS:</Text>
           <TextInput style={styles.input1} placeholder="Reservas" />
@@ -306,11 +324,12 @@ function Menu ({ navigation }) {
     return (
         <View style={styles.container2}>
         <View style={styles.header2}>
-          <Text style={styles.headerText2}>BOMBOIDI®</Text>
+          <Text style={styles.headerText2}>BOMBOIDI</Text>
         </View>
         <View style={styles.main2}>
           <View style={styles.container2}>
-            
+          <Text style={styles.Text2}>contra-filé</Text>
+          <Text style={styles.Text2}>picanha</Text>
           </View>
         </View>
         <View style={styles.footer2}>
@@ -331,7 +350,7 @@ function Menu ({ navigation }) {
         
       </View>
             <View style={styles.contact3}>
-              <Text style={styles.contato3}>Contato</Text>
+              
               <View style={styles.form3}>
                 <Text>Email:</Text>
                 <TextInput style={styles.input3} keyboardType="email-address" />
@@ -356,7 +375,7 @@ function Menu ({ navigation }) {
               <Text style={styles.headerText4}>BOMBOIDI</Text>
             </View>
             <View style={styles.mapContainer4}>
-              
+            <Text style={styles.Text4}>Mapa</Text> 
             </View>
             <View style={styles.footer4}>
               <Text style={styles.footerText4}>© 2024 Localização. Todos os direitos reservados.</Text>
